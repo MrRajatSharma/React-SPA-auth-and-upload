@@ -19,7 +19,7 @@ export default {
     const isAuthenticated = auth.isAuthenticated();
     // const tokenHeader = auth.getTokenHeader();
     // const token = auth.getToken() || {};
-    let basePromise = Promise.resolve();
+    const basePromise = Promise.resolve();
     const headers = {
       Accept: 'application/json',
       // withCredentials: true
@@ -50,7 +50,7 @@ export default {
         this._fetch(url, {
           method: upperMethod,
           headers,
-          credentials: "include",
+          credentials: 'include',
           body: method !== 'GET' ? JSON.stringify(data) : null,
         }),
       )
