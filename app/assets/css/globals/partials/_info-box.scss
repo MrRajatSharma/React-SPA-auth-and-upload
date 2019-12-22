@@ -1,0 +1,24 @@
+.info-box {
+  font-size: $size-s;
+  padding: $spacing-s $spacing-m $spacing-s - .1em $spacing-m;
+
+  border: solid 1px;
+  border-radius: $border-radius;
+
+  margin-bottom: $spacing-m;
+
+  p {
+    margin-bottom: $spacing-s;
+  }
+
+  &.info-box--multiline {
+    padding: $spacing-l;
+    padding-bottom: $spacing-l - .2em;
+  }
+
+  &.info-box--error {
+    background-color: $color-red;
+    border-color: $color-red;
+    @include text-color($color-white);
+  }
+}

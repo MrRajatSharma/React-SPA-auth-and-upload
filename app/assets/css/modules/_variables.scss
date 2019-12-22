@@ -1,0 +1,78 @@
+$screen-xxl: 1440px;
+$screen-xl: 1200px;
+$screen-l: 960px;
+$screen-md: 768px;
+$screen-sm: 480px;
+$screen-xs: 320px;
+
+$color-base: #7e5bef;
+$color-base-dark:  #36364b;
+$color-base-light: #ded5fb;
+$color-base-lighter: #f1ecff;
+$color-base-lightest: #f9f7ff;
+
+$color-accent: #7e5bef;
+$color-accent-darker: darken($color-accent, 6%);
+
+$color-grey: #C0C5C9;
+$color-grey-darker: darken($color-grey, 10%);
+$color-grey-light: #E1E6EA;
+$color-grey-lighter: #F3F3F7;
+$color-grey-lightest: #F9F9FA;
+
+$color-green: #71C341;
+$color-magenta: #f3eb7c;
+$color-white: white;
+$color-red: #E7294F;
+$color-blue: #31A9D6;
+
+$color-facebook: #3b5998;
+
+
+$family-primary: 'CircularStd', Helvetica, Arial, sans-serif;
+$family-icons: 'Ionicons';
+
+$weight-primary: 300;
+$weight-primary-medium: 700;
+$weight-primary-bold: 900;
+
+$line-height-m: 1.5em;
+$line-height-s: 1.3em;
+$line-height-xs: 1.07em;
+
+$size-xxs: .775em;
+$size-xs: .85em;
+$size-s: .9em;
+$size-m: 16px;
+$size-l: 1.3em;
+$size-xl: 1.8em;
+$size-xxl: 2.2em;
+
+
+$spacing-xs: .3em;
+$spacing-s: .7em;
+$spacing-m: 1em;
+$spacing-l: 1.4em;
+$spacing-xl: 1.8em;
+$spacing-xxl: 3em;
+$spacing-xxxl: 6em;
+
+
+$border-style: solid;
+$border-width: 1px;
+$border-radius: 5px;
+
+
+$transition-duration: .2s;
+$transition-timing: ease;
+
+
+$z-index: (
+  notification: 5,
+  modal: 4,
+  fab: 3,
+  dominant: 1,
+);
+
+
+$fonts-path: '/assets/fonts';

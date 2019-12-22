@@ -1,0 +1,72 @@
+.btn {
+  @extend %btn;
+  user-select: none;
+}
+
+.btn.btn--light {
+  border-color: $color-base;
+  background-color: $color-base-lighter;
+  color: $color-accent;
+  @include transition(opacity);
+
+  &:hover {
+    opacity: .9;
+  }
+}
+
+.btn.btn--outlined {
+  color: $color-accent;
+  border-color: $color-accent;
+  background-color: transparent;
+
+  &:hover {
+    color: $color-accent-darker;
+    border-color: $color-accent-darker;
+  }
+
+  &.btn--dark {
+    color: $color-base;
+    border-color: $color-base;
+  }
+}
+
+.btn.btn--smallest {
+  font-size: $size-xxs;
+  padding: $spacing-s;
+  padding-bottom: $spacing-s - .2em;
+  border-width: 1px;
+}
+
+.btn.btn--smaller {
+  font-size: $size-s;
+}
+
+.btn.btn--small {
+  font-size: $size-s;
+  padding: $spacing-s $spacing-l;
+  padding-bottom: $spacing-s - .2em;
+  border-width: 1px;
+}
+
+.btn.btn--text-lower {
+  text-transform: none;
+}
+
+.btn.btn--push {
+  margin-right: $spacing-s;
+}
+
+.btn.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn[disabled] {
+  pointer-events: none;
+  background-color: $color-grey;
+  border-color: $color-grey;
+
+  &:hover {
+    background-color: $color-grey;
+  }
+}

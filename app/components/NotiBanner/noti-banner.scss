@@ -1,0 +1,79 @@
+@import "../../assets/css/modules/all";
+
+.noti-banner {
+  padding: $spacing-m 0;
+  color: $color-white;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  @include z-index(notification);
+  
+  opacity: 0;
+  transform: translateY(-58px);
+  @include transition((opacity, transform));
+
+  background-color: $color-base;
+
+  a {
+    color: $color-white;
+  }
+
+  &__icon {
+    &:before {
+      font-family: $family-icons;
+      font-size: $size-m;
+
+      position: relative;
+      top: 1px;
+    }
+
+    display: inline-block;
+    margin-right: $spacing-m;
+  }
+
+  &__help {
+    font-size: $size-s;
+    float: right;
+  }
+
+  &.noti-banner--success {
+    background-color: $color-green;
+
+    .noti-banner__icon:before {
+      content: '\f149';
+    }
+  }
+  &.noti-banner--error {
+    background-color: $color-red;
+
+    .noti-banner__icon:before {
+      content: '\f100';
+    }
+  }
+
+  &.noti-banner--visible {
+    opacity: 1;
+    transform: translateY(0) !important;
+  }
+
+  &.noti-banner--sticky {
+    position: fixed;
+  }
+
+  &.noti-banner--bottom {
+    top: auto;
+    bottom: 0;
+    transform: translateY(58px);
+  }
+
+  &--close-button {
+    position: absolute;
+    right: 0px;
+    i {
+      padding: .7em;
+      margin: .5em;
+      background: #ffffff42;
+    }
+  }
+}

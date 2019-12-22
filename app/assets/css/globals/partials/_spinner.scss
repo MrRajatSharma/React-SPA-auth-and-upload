@@ -1,0 +1,39 @@
+.spinner {
+  text-align: center;
+  height: 2em;
+
+  &:before {
+    content: '\f29c';
+
+    font-size: 2em;
+    font-family: $family-icons;
+    
+    transform-origin: 50% 50%;
+    animation: spin 1s infinite;
+
+    display: inline-block;
+    line-height: 1em;
+  }
+}
+
+.spinner--big {
+  height: 3em;
+
+  &:before {
+    font-size: 3em;
+  }
+}
+
+.spinner--push {
+  padding: $spacing-l 0;
+  box-sizing: content-box;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

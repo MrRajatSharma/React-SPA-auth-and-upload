@@ -1,0 +1,77 @@
+@import "../../assets/css/modules/all";
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include z-index(modal);
+
+  background-color: rgba($color-grey-light, .7);
+  overflow-y: auto;
+
+  visibility: hidden;
+  opacity: 0;
+  @include transition(opacity);
+
+  &__box {
+    border-radius: $border-radius;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: $spacing-xxl;
+    box-shadow: 0px 0px 200px 0px $color-grey-light;
+
+    background-color: $color-white;
+    transform: scale(0.9);
+    @include transition(transform);
+  }
+
+  &__header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+
+    background-color: $color-accent;
+    overflow: hidden;
+    color: $color-white;
+    padding: $spacing-xl;
+
+    &__title-group {
+      overflow: hidden;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: $color-white;
+      }
+      .h--normalize-weight {
+        margin: 0;
+      }
+    }
+  }
+
+  &__body {
+    padding: $spacing-xl;
+    overflow: hidden;
+  }
+
+  &.modal--visible {
+    visibility: visible;
+    opacity: 1;
+
+    .modal__box {
+      transform: scale(1);
+    }
+  }
+
+  &.modal--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal__box {
+      margin: auto;
+    }
+  }
+}

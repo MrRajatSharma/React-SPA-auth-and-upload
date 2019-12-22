@@ -1,0 +1,59 @@
+%bg-image {
+  background-color: $color-base;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: static;
+  background-size: cover;
+}
+
+%list-inline {
+  li {
+    display: block;
+    float: left;
+    margin-right: $spacing-xl;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after {
+      margin-right: 0;
+    }
+  }
+}
+
+%btn {
+  @include main-font;
+
+  width: auto;
+
+  padding: $spacing-m $spacing-xl;
+  padding-bottom: $spacing-m - 0.2em;
+
+  color: $color-white;
+  background-color: $color-accent;
+
+  text-transform: uppercase;
+  font-weight: $weight-primary-medium;
+
+  border: solid 1px $color-accent;
+  border-radius: $border-radius;
+  line-height: 1em;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  display: inline-block;
+  text-align: center;
+
+  @include transition((background-color, border-color));
+
+  &:hover {
+    background-color: $color-accent-darker;
+    border-color: $color-accent-darker;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

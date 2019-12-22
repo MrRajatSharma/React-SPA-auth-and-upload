@@ -1,0 +1,43 @@
+@import "../../assets/css/modules/all";
+
+.navbar {
+  margin: $spacing-m 0;
+  background: $color-white;
+  padding: $spacing-m $spacing-xl;
+  border-radius: $border-radius;
+  box-shadow: 1px 1px 3px 1px $color-grey-light;
+  @include transition(all);
+
+  &__title {
+    display: inline-block;
+    color: $color-accent;
+  }
+
+  &__links {
+    display: inline-block;
+    float: right;
+
+    &__link {
+      text-decoration: none;
+      color: $color-base-dark;
+      display: inline-flex;
+      align-items: center;
+      margin-left: $spacing-m;
+      border-left: 1px solid $color-grey-light;
+      padding-left: $spacing-s;
+
+      &:hover {
+        color: darken($color-base-dark, 5%);
+      }
+
+      &__icon {
+        font-size: $size-xl;
+        margin-right: $spacing-xs;
+      }
+
+      &__text {
+        font-size: $size-l;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.logo-square {
+  width: 82px;
+  height: 72px;
+
+  float: left;
+  overflow: hidden;
+
+  background-color: $color-grey;
+  text-align: center;
+  line-height: 90px;
+
+  img {
+    max-width: 35px;
+  }
+}
+
+.logo-text {
+  max-width: 230px;
+  margin: 0 auto;
+  margin-bottom: $spacing-m;
+
+  img {
+    width: 100%;
+  }
+}

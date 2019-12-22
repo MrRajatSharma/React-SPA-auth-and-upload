@@ -1,0 +1,153 @@
+h1,h2,h3,h4,h5,h6 {
+  font-weight: $weight-primary-bold;
+  line-height: $line-height-s;
+  
+  text-transform: uppercase;
+  word-break: break-word;
+
+  &.h--normalize-weight {
+    font-weight: $weight-primary;
+  }
+
+  &.h--no-spacing {
+    margin-bottom: 0;
+  }
+
+  &.h--spacing-sm {
+    margin-bottom: $spacing-xs;
+  }
+
+  &.h--lower {
+    text-transform: none;
+  }
+}
+
+h1,.h1 {
+  font-size: 4em;
+
+  &.h1--sm {
+    font-size: 3.4em;
+  }
+}
+h2,.h2 {
+  font-size: 2.75em;
+}
+h3,.h3 {
+  font-size: 2.25em;
+}
+h4,.h4 {
+  font-size: 1.75em;
+}
+h5,.h5 {
+  font-size: 1.25em;
+}
+h6,.h6 {
+  font-size: 1em;
+}
+
+a {
+  color: $color-base;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &.a--clean {
+    text-decoration: none;
+  }
+}
+
+strong,b {
+  font-weight: $weight-primary-medium;
+}
+
+p {
+  margin-bottom: $spacing-m;
+}
+
+table {
+  width: 100%;
+  margin-bottom: $spacing-m;
+  border-spacing: 0;
+
+  &.table--border {
+    @include border();
+  }
+  
+  tr.tr--highlight {
+    font-weight: $weight-primary-bold;
+    background-color: $color-grey-light;
+  }
+  
+  tr.tr--link {
+    @include transition(all, .3s);
+    cursor: pointer;
+
+    &:not(.tr--link--no-arrow) td:last-child:before {
+      content: '\f125';
+      font-family: $family-icons;
+      float: right;
+      padding-left: $spacing-s;
+    }
+
+    td {
+      @include transition(background-color, $duration: 0.1s);
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      background: $color-base-lighter;
+      box-shadow: 0 0 1px -1px;
+    }
+  }
+
+  th {
+    @include border(bottom);
+    // color: $color-white;
+    // background-color: $color-base;
+
+    &.th--sortable {
+      cursor: pointer;
+
+      &:after {
+        content: '\f3d0';
+        font-family: $family-icons;
+        font-size: $size-s;
+
+        margin-left: $spacing-s;
+        
+        position: relative;
+        top: .05em;
+      }
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-base-lightest;
+  }
+
+  th, td {
+    text-align: left;
+    padding: $spacing-s $spacing-m;
+  }
+}
+
+hr {
+  margin-bottom: $spacing-m;
+  border: 0;
+  position: relative;
+  @include border(bottom);
+
+  &.hr--or:before {
+    content: 'OR';
+    
+    font-size: $size-xs;
+    text-align: center;
+
+    position: absolute;
+    top: -10px;
+    left: 50%;
+
+    margin-left: -1em - $spacing-s / 2;
+    background: $color-white;
+    padding: 0 $spacing-s;
+  }
+}

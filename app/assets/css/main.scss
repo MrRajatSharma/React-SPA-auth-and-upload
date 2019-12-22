@@ -1,0 +1,63 @@
+@import './modules/_all';
+
+@font-face {
+  font-family: "CircularStd";
+  // font-weight: 700;
+	src: url("../fonts/CircularStd-Book.woff") format("woff");
+}
+
+.card {
+  background-color: $color-white;
+  box-shadow: 0px 0px 10px 0px $color-grey-light;
+  height: 100%;
+  padding: $spacing-m;
+}
+
+.validation {
+  &--error {
+    color: $color-red;
+    margin-top: .3em;
+  }
+
+  &--warning {
+    color: $color-magenta;
+    margin-top: .3em;
+  }
+}
+
+.avatar {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  border-radius: 5em;
+  display: inline-block;
+  padding: .7em;
+  margin: .3em;
+  background: $color-grey-lighter;
+  @include transition(all);
+
+  &:hover {
+    box-shadow: 1px 1px 5px 1px $color-grey-light;
+    transform: scale(1.01);
+  }
+
+  &:active, &:focus {
+    box-shadow: 1px 1px 5px 1px $color-accent;
+  }
+}
+.pagination {
+  font-size: $size-m;
+  &__prev, &__next {
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  &__number {
+    padding: $spacing-m;
+  }
+}
+
+.filepond--panel-root {
+  background: $color-grey-lighter !important;
+}

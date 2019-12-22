@@ -1,0 +1,155 @@
+input {
+  width: 100%;
+  height: 47px;
+
+  @include main-font;
+  font-weight: $weight-primary;
+
+  padding: $spacing-s $spacing-m;
+  background-color: $color-grey-lightest !important;
+  
+  border: none;
+  box-shadow: 0px 1px 1px 0px $color-grey;
+  border-radius: $border-radius;
+
+  @include transition(all);
+  line-height: 1em;
+
+  &::-webkit-input-placeholder {
+    font-weight: $weight-primary;
+    color: $color-grey;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0px 3px 10px -1px $color-grey;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+textarea {
+  @extend input;
+  line-height: $line-height-m;
+  height: 120px;
+  resize: vertical;
+
+  &.textarea--large {
+    height: 308px;
+  }
+}
+
+input[type="submit"],
+button[type="submit"]{
+  @extend .btn;
+  float: right;
+}
+
+select {
+  @extend input;
+
+  @include z-index(dominant);
+  background-color: rgba(0,0,0,0);
+  position: relative;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+
+  &:focus {
+    border-color: $color-grey;
+  }
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+
+  padding: 0;
+
+  float: left;
+  line-height: 0;
+
+  position: relative;
+  z-index: 1;
+  top: 2px;
+  
+  margin: 0;
+  -webkit-appearance: none;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  &:checked + .checkbox-wrapper__icon:before {
+    display: block;
+  }
+
+  &:focus {
+    border-color: $color-grey;
+  }
+}
+
+label {
+  display: block;
+}
+
+.select-wrapper,
+.checkbox-wrapper {
+  position: relative;
+
+  &__icon:before {
+    content: '\f35f';
+    font-family: $family-icons;
+
+    position: absolute;
+    top: 7%;
+    right: 0;
+
+    color: $color-grey;
+  }
+}
+
+.select-wrapper {
+  width: 100%;
+  height: 47px;
+  display: inline-block;
+  background-color: $color-grey-lightest;
+
+  &__icon:before {
+    top: 0;
+    right: $spacing-s;
+    line-height: 47px;
+  }
+}
+
+.checkbox-wrapper {
+  float: left;
+  margin-right: $spacing-s;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: $color-grey-lightest;
+
+    &:before {
+      content: '\F121';
+      font-family: $family-icons;
+      font-size: $size-s;
+      color: $color-base;
+
+      top: 0;
+      left: 0;
+
+      line-height: 22px;
+      text-align: center;
+
+      display: none;
+    }
+  }
+}

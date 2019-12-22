@@ -1,0 +1,79 @@
+@import "../../assets/css/modules/all";
+
+.alert-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include z-index(modal);
+
+  background-color: rgba($color-base, .7);
+  overflow-y: auto;
+
+  opacity: 0;
+  @include transition(opacity);
+
+  &__box {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: $spacing-xxl;
+
+    background-color: $color-white;
+    transform: scale(0.9);
+    @include transition(transform);
+  }
+
+  &__body {
+    padding: $spacing-xl $spacing-xl $spacing-m $spacing-xl;
+    overflow: hidden;
+
+    &__subtitle {
+      margin: 0px;
+      font-size: $size-xs;
+    }
+  }
+
+  &__footer {
+    .btn {
+      width: 50%;
+      display: inline-block;
+      border-radius: 0px;
+      background: none;
+      color: $color-base;
+      padding: $spacing-l $spacing-xl;
+      font-weight: $weight-primary-bold;
+      border-top: solid 1px $color-grey-light;
+      border-right: solid 1px $color-grey-light;
+      border-left: none;
+      &:last-child {
+        border-right: none;
+      }
+      &:hover {
+        background: $color-accent;
+        color: $color-white;
+      }
+      &:only-child{
+        width: 100%;
+      }
+    }
+  }
+
+  &.alert-modal--visible {
+    opacity: 1;
+
+    .alert-modal__box {
+      transform: scale(1);
+    }
+  }
+
+  &.alert-modal--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .alert-modal__box {
+      margin: auto;
+    }
+  }
+}

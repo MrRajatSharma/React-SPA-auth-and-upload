@@ -1,0 +1,22 @@
+.list--normal {
+  margin-bottom: $spacing-m;
+  padding-left: 15px;
+
+  li {
+    margin-bottom: $spacing-xs;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+  }
+}
+
+.list--inline {
+  @extend %list-inline;
+
+  &.list--spacing-sm {
+    li {
+      margin-right: $spacing-s;
+    }
+  }
+}
