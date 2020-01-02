@@ -201,7 +201,13 @@ class Auth extends Component {
                   label="role"
                   name="role"
                   validate={[requiredValidation]}
-                  options={["User", "Admin", "Researcher", "Content manager", "Product manager"]}
+                  options={[
+                    'User',
+                    'Admin',
+                    'Researcher',
+                    'Content manager',
+                    'Product manager',
+                  ]}
                 />
               </div>
             </React.Fragment>
