@@ -13,6 +13,7 @@
   "author": "Rajat Sharma",
   "license": "MIT",
   "scripts": {
+    "setup": "yarn install",
     "analyze:clean": "rimraf stats.json",
     "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "start": "cross-env NODE_ENV=development node server",
