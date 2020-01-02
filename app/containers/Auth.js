@@ -36,7 +36,7 @@ class Auth extends Component {
     const { email, password } = data;
     const { showSignUp } = this.state;
 
-    let registerRoute = '/signup';
+    const registerRoute = '/signup';
     if (!showSignUp) {
       // user login
       auth
